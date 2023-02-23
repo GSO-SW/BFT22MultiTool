@@ -1,4 +1,6 @@
 ﻿using Figgle;
+using System.Runtime.CompilerServices;
+using System.Runtime.Versioning;
 
 namespace MABFTKlassenBibliothek 
 { 
@@ -61,7 +63,7 @@ namespace MABFTKlassenBibliothek
 
                     case "m":
                         Console.Clear();
-                        //Hier das Mathematikmenü aufrufen
+                        
                         break;
 
                     case "p":
