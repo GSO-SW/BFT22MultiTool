@@ -50,7 +50,6 @@ namespace WIBFTKlassenBibliothek
                 {
                     case "e":
                         Console.Clear();
-                        Handyvertrag.Handyvertrag1();
                         break;
 
                     case "i":
