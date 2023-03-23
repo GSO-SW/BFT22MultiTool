@@ -1,4 +1,5 @@
-﻿namespace ETBFTKlassenBibliothek
+﻿using Figgle;
+namespace ETBFTKlassenBibliothek
 {
     public class ETMenue
     {
