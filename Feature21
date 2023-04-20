@@ -124,7 +124,7 @@ if (zahl == 1)
         Console.WriteLine("Geben Sie die Anzahl der Zustände ein:");
         int anzahlZustaende = int.Parse(Console.ReadLine());
 
-        // Zustandshäufigkeiten einlesen
+
         Dictionary<string, int> zustandHaeufigkeiten = new Dictionary<string, int>();
         for (int i = 1; i <= anzahlZustaende; i++)
         {
@@ -133,7 +133,7 @@ if (zahl == 1)
             zustandHaeufigkeiten.Add($"Zustand{i}", haeufigkeit);
         }
 
-        // Übergangshäufigkeiten einlesen
+
         Dictionary<string, Dictionary<string, int>> zustandUebergangsHaeufigkeiten = new Dictionary<string, Dictionary<string, int>>();
         for (int i = 1; i <= anzahlZustaende; i++)
         {
@@ -149,7 +149,7 @@ if (zahl == 1)
             zustandUebergangsHaeufigkeiten.Add(zustand1, uebergangsHaeufigkeiten);
         }
 
-        // Konditionale relative Häufigkeiten berechnen und ausgeben
+
         Console.WriteLine("Zustand\tZustand 2\tKond. Rel. Haeufigkeit");
         foreach (KeyValuePair<string, Dictionary<string, int>> uebergang in zustandUebergangsHaeufigkeiten)
         {
@@ -175,7 +175,6 @@ if (zahl == 1)
         Console.WriteLine("Geben Sie die Anzahl der Daten ein:");
         int anzahlDaten = int.Parse(Console.ReadLine());
 
-        // Daten einlesen
         double[] daten = new double[anzahlDaten];
         for (int i = 0; i < anzahlDaten; i++)
         {
@@ -183,7 +182,6 @@ if (zahl == 1)
             daten[i] = double.Parse(Console.ReadLine());
         }
 
-        // Sortieren der Daten
         Array.Sort(daten);
 
         Console.WriteLine("Zahl\tAbsolut\tRelativ\tKumulativ");
