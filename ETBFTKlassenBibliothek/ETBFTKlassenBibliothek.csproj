@@ -10,4 +10,8 @@
     <PackageReference Include="Figgle" Version="0.5.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj" />
+  </ItemGroup>
+
 </Project>
