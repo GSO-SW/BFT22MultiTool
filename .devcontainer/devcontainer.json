@@ -1,0 +1,58 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
+{
+	"name": "C# (.NET)",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { 
+			//https://mcr.microsoft.com/en-us/product/devcontainers/dotnet/about
+			// Update 'VERSION' to pick a .NET Core version: 3.1, 7.0
+			// Append "VARIANT"-bullseye or -focal to pin to an OS version.
+			"VARIANT": "6.0-bullseye"//<-- HIER DIE VERSION ÄNDERN
+	
+		}
+	},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+
+	  "features": {
+		    "ghcr.io/devcontainers/features/dotnet:1": {
+		      "version": "latest"
+			    }
+			  },
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {},
+			"extensions": [
+				"ms-dotnettools.csharp",
+				"ms-vscode.powershell",
+				"visualstudioexptteam.vscodeintellicode",
+				"yzhang.markdown-all-in-one"
+			]
+		}
+	},
+
+	// Use 'portsAttributes' to set default properties for specific forwarded ports. 
+	// More info: https://containers.dev/implementors/json_reference/#port-attributes
+	"portsAttributes": {
+		"5000": {
+			"label": "Hello Remote World",
+			"onAutoForward": "notify"
+		},
+		"5001": {
+			"protocol": "https"
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [5000, 5001],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand":"dotnet restore"
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
