@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace PHFragBFTKlassenBibliothek
 {
     internal class Feature6
-    {
+    { 
         internal static void feature_6()
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
