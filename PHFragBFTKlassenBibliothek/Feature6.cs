@@ -76,6 +76,7 @@ namespace PHFragBFTKlassenBibliothek
                     }
                     break;
                 case "2":
+                    Console.Clear();
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     Console.WriteLine("+----------------------------------------------+\n" +
                                       "|                                              |\n" +
@@ -85,11 +86,13 @@ namespace PHFragBFTKlassenBibliothek
                                       "|                                              |\n" +
                                       "| Info:                                        |\n" +
                                       "|                                              |\n" +
-                                      "| Die Einheit Kilometer gehört zum metrischen  |\n" +
-                                      "| System und leitet sich von der Basiseinheit  |\n" +
-                                      "| Meter ab. Dabei entspricht 1 Kilometer       |\n" +
-                                      "| 1.000 Metern bzw. 1 Meter entspricht 0,001   |\n" +
-                                      "| Kilometer.                                   |\n" +
+                                      "| Der Meter ist die Basiseinheit der           |\n" +
+                                      "| Länge im Internationalen Einheitensystem     |\n" +
+                                      "| und in anderen metrischen Einheitensystemen. |\n" +
+                                      "| Ein Meter ist seit 1983 definiert als die    |\n" +
+                                      "| Länge der Strecke, die das Licht im Vakuum   |\n" +
+                                      "| während der Dauer von 1/299 792 458          |\n" +
+                                      "| Sekunde zurücklegt.                          |\n" +
                                       "|                                              |\n" +
                                       "+----------------------------------------------+\n");
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -117,6 +120,7 @@ namespace PHFragBFTKlassenBibliothek
                     }
                     break;
                 case "3":
+                    Console.Clear();
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     Console.WriteLine("+----------------------------------------------+\n" +
                                       "|                                              |\n" +
@@ -126,11 +130,13 @@ namespace PHFragBFTKlassenBibliothek
                                       "|                                              |\n" +
                                       "| Info:                                        |\n" +
                                       "|                                              |\n" +
-                                      "| Die Einheit Kilometer gehört zum metrischen  |\n" +
-                                      "| System und leitet sich von der Basiseinheit  |\n" +
-                                      "| Meter ab. Dabei entspricht 1 Kilometer       |\n" +
-                                      "| 1.000 Metern bzw. 1 Meter entspricht 0,001   |\n" +
-                                      "| Kilometer.                                   |\n" +
+                                      "| Das Kilogramm ist die im internationalen     |\n" +
+                                      "| verwendete Maßeinheit für die Masse.         |\n" +
+                                      "| Das Einheitenzeichen des Kilogramms ist kg.  |\n" +
+                                      "| Die Definition des Kilogramms basiert auf    |\n" +
+                                      "| einem zahlenmäßig festgelegten Wert der      |\n" +
+                                      "| Planckschen Konstanten und den Definitionen  |\n" +
+                                      "| von Meter und Sekunde.                       |\n" +
                                       "|                                              |\n" +
                                       "+----------------------------------------------+\n");
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -158,6 +164,7 @@ namespace PHFragBFTKlassenBibliothek
                     }
                     break;
                 case "4":
+                    Console.Clear();
                     Console.ForegroundColor = ConsoleColor.DarkMagenta;
                     Console.WriteLine("+----------------------------------------------+\n" +
                                       "|                                              |\n" +
@@ -167,11 +174,13 @@ namespace PHFragBFTKlassenBibliothek
                                       "|                                              |\n" +
                                       "| Info:                                        |\n" +
                                       "|                                              |\n" +
-                                      "| Die Einheit Kilometer gehört zum metrischen  |\n" +
-                                      "| System und leitet sich von der Basiseinheit  |\n" +
-                                      "| Meter ab. Dabei entspricht 1 Kilometer       |\n" +
-                                      "| 1.000 Metern bzw. 1 Meter entspricht 0,001   |\n" +
-                                      "| Kilometer.                                   |\n" +
+                                      "| Die Sekunde ist die SI-Basiseinheit der      |\n" +
+                                      "| Zeit. Die Unterteilung der Stunde in 60      |\n" +
+                                      "| Minuten zu je 60 Sekunden findet sich        |\n" +
+                                      "| bereits um das Jahr 1000 in einer Schrift    |\n" +
+                                      "| von al-Bīrūnī. Als Secunda von lateinisch    |\n" +
+                                      "| pars minuta secunda ist sie seit dem         |\n" +
+                                      "| 13. Jahrhundert bekannt.                     |\n" +
                                       "|                                              |\n" +
                                       "+----------------------------------------------+\n");
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -189,7 +198,7 @@ namespace PHFragBFTKlassenBibliothek
                     else if (double.TryParse(input3, out double milliseconds))
                     {
                         double seconds = milliseconds / 1000;
-                        Console.WriteLine("{0} Millisekunden entsprechen {1} Sekunden.", milliseconds, seconds);
+                        Console.WriteLine($"{milliseconds} Millisekunden entsprechen {seconds} Sekunden.");
                     }
                     else
                     {

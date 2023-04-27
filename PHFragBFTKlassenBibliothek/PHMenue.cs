@@ -17,12 +17,12 @@ namespace PHFragBFTKlassenBibliothek
                 Console.WriteLine();
 
                 //ASCII art Logo wird erzeugt.
+                Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.WriteLine
                     (FiggleFonts.Slant.Render("BFTMultiTool"));
 
                 //Konsolentitel wird geändert.
                 Console.Title = "BFTMultiTool";
-
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "                              >>> Physik Submenu <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
@@ -44,7 +44,9 @@ namespace PHFragBFTKlassenBibliothek
                 Console.WriteLine("3. ");
                 Console.WriteLine("4. ");
                 Console.WriteLine("5. ");
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.Write("Eingabe: ");
+                Console.ResetColor();
                 HauptAusw = Console.ReadLine().ToLower();
 
                 switch (HauptAusw)
