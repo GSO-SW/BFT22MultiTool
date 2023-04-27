@@ -17,13 +17,13 @@ namespace ETBFTKlassenBibliothek
 
                 //ASCII art Logo wird erzeugt.
                 Console.WriteLine
-                    (FiggleFonts.Slant.Render("BFTMultiTool"));
+                    (FiggleFonts.Slant.Render("ET-Submenü"));
 
                 //Konsolentitel wird geändert.
-                Console.Title = "BFTMultiTool";
+                Console.Title = "ET-Submenü";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Hauptmenü <<<\n" +
+                                  "                              >>> ET-Submenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
@@ -38,39 +38,35 @@ namespace ETBFTKlassenBibliothek
 
                 //Eingabeaufforderung 
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
-                Console.WriteLine("\te - Elektrotechnik");
-                Console.WriteLine("\ti - Informatik");
-                Console.WriteLine("\tm - Mathematik");
-                Console.WriteLine("\tp - Physik");
-                Console.WriteLine("\tw - Wirtschaft\n");
+                Console.WriteLine("\t1 - Solarenergie-REchner");
+                Console.WriteLine("\t2 - Bauteil-Rechner");
+                Console.WriteLine("\t3 - Elektro-Sicherheit");
+                Console.WriteLine("\t4 - Rechner für Elektrische-Werte");
                 Console.Write("Eingabe:");
                 HauptAusw = Console.ReadLine().ToLower();
 
                 switch (HauptAusw)
                 {
-                    case "e":
+                    case "1":
                         Console.Clear();
-                        //Hier das Etechnikmenü aufrufen
+                        //Hier das Etechnikmenü aufrufen+
+                        Feature1.Feature_1();
                         break;
 
-                    case "i":
+                    case "2":
                         Console.Clear();
                         //Hier das Informationstechnikmenü aufrufen
                         break;
 
-                    case "m":
+                    case "3":
                         Console.Clear();
                         //Hier das Mathematikmenü aufrufen
                         break;
 
-                    case "p":
+                    case "4":
                         Console.Clear();
-                        //Hier das Physikmenü aufrufen
-                        break;
-
-                    case "w":
-                        Console.Clear();
-                        //Hier das Wirtschaftsmenü aufrufen
+                        //Hier Feature4 aufrufen
+                        //Feature4.Feature_4();
                         break;
 
                     case "exit":
