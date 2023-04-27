@@ -1,4 +1,6 @@
-﻿namespace ETBFTKlassenBibliothek
+﻿using Figgle;
+
+namespace ETBFTKlassenBibliothek
 {
     public class ETMenue
     {
@@ -21,7 +23,7 @@
                 Console.Title = "BFTMultiTool";
 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Hauptmenü <<<\n" +
+                                  "                              >>> Submenü <<<\n" +
                                   "------------------------------------------------------------------------------------\n\n");
 
                 Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
@@ -38,7 +40,7 @@
                 Console.WriteLine("Wählen Sie eine der folgenden Themenbereiche:\n");
                 Console.WriteLine("\te - Elektrotechnik");
                 Console.WriteLine("\ti - Informatik");
-                Console.WriteLine("\tm - Mathematik");
+                Console.WriteLine("\tm - Feature3");
                 Console.WriteLine("\tp - Physik");
                 Console.WriteLine("\tw - Wirtschaft\n");
                 Console.Write("Eingabe:");
@@ -58,6 +60,7 @@
 
                     case "m":
                         Console.Clear();
+                        Feature3.Feature_3();
                         //Hier das Mathematikmenü aufrufen
                         break;
 
