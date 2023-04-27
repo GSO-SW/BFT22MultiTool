@@ -1,6 +1,6 @@
 ﻿using Figgle;
 
-namespace ETBFTKlassenBibliothek
+namespace ETKlassenBibliothek
 {
     public class ETMenue
     {

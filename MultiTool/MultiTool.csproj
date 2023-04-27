@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KonsolenExtrasBibliothek\KonsolenExtrasBibliothek.csproj" />
-    <ProjectReference Include="..\ETBFTKlassenBibliothek\ETBFTKlassenBibliothek.csproj" />
+    <ProjectReference Include="..\ETKlassenBibliothek\ETKlassenBibliothek.csproj" />
   </ItemGroup>
 
 </Project>
