@@ -1,4 +1,4 @@
-﻿using Figgle;
+using Figgle;
 
 namespace PHFragBFTKlassenBibliothek
 {
@@ -15,17 +15,16 @@ namespace PHFragBFTKlassenBibliothek
                 (int, int) cPosBM = Console.GetCursorPosition();
 
                 Console.WriteLine();
-
+                Console.ForegroundColor = ConsoleColor.Green;
                 //ASCII art Logo wird erzeugt.
-                Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.WriteLine
                     (FiggleFonts.Slant.Render("BFTMultiTool"));
 
                 //Konsolentitel wird geändert.
                 Console.Title = "BFTMultiTool";
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                  "                              >>> Physik Submenu <<<\n" +
-                                  "------------------------------------------------------------------------------------\n\n");
+                                  "|                              >>> Physik Submenu <<<                              |\n" +
+                                  "------------------------------------------------------------------------------------\n");
 
                 Console.WriteLine("Eingabe: exit\t->\tbeendet das Programm");
 
@@ -44,9 +43,7 @@ namespace PHFragBFTKlassenBibliothek
                 Console.WriteLine("3. ");
                 Console.WriteLine("4. ");
                 Console.WriteLine("5. ");
-                Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.Write("Eingabe: ");
-                Console.ResetColor();
                 HauptAusw = Console.ReadLine().ToLower();
 
                 switch (HauptAusw)
@@ -54,42 +51,34 @@ namespace PHFragBFTKlassenBibliothek
                     case "1":
                         Console.Clear();
                         Feature6.feature_6();
-                        //Hier das Etechnikmenü aufrufen
                         break;
 
                     case "2":
                         Console.Clear();
-                        //Hier das Informationstechnikmenü aufrufen
+                        Feature7.feature_7();
                         break;
 
                     case "3":
                         Console.Clear();
-                        //Hier das Mathematikmenü aufrufen
+                        Feature8.feature_8();
                         break;
 
                     case "4":
                         Console.Clear();
-                        //Hier das Physikmenü aufrufen
+                        Feature9.feature_9();
                         break;
-
-                    case "5":
-                        Console.Clear();
-                        //Hier das Wirtschaftsmenü aufrufen
-                        break;
-
                     case "exit":
                         Exit = true;
                         break;
                     default:
 
                         Console.WriteLine("Ungültige Eingabe");
-                        Console.ReadKey();
 
                         (int, int) cPosAM = Console.GetCursorPosition();
 
                         KonsolenExtrasBibliothek.ConsoleExtras.ClearCurrentConsoleLine(cPosBM.Item2, cPosAM.Item2);
-
                         break;
+                        Console.ReadKey();
                 }
 
             } while (!Exit);
