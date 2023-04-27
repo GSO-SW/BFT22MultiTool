@@ -1,8 +1,7 @@
 using System;
+using System.ComponentModel.Design;
 
-
-
-    Console.WriteLine("_________________________________________");
+Console.WriteLine("_________________________________________");
 Console.WriteLine("        Wahrscheinlichkeitsrechner");
 Console.WriteLine("_________________________________________");
 Console.WriteLine("");
@@ -12,13 +11,12 @@ Console.WriteLine("Wählen sie eine Kategorie aus:");
 Console.WriteLine("");
 Console.WriteLine("1 | Relative Häufigkeit");
 Console.WriteLine("2 | A-priori-Wahrscheinlichkeit");
-Console.WriteLine("3 | A-posteriori-Wahrscheinlichkeit");
-Console.WriteLine("4 | Bedingte Wahrscheinlichkeit");
-Console.WriteLine("5 | Marginale Wahrscheinlichkeit");
-Console.WriteLine("6 | Joint Probability");
-Console.WriteLine("7 | Kumulative Verteilungsfunktion");
-Console.WriteLine("8 | Unabhängige Wahrscheinlichkeit");
-Console.WriteLine("9 | Bedingte Unabhängigkeit");
+Console.WriteLine("3 | Bedingte Wahrscheinlichkeit");
+Console.WriteLine("4 | Marginale Wahrscheinlichkeit");
+Console.WriteLine("5 | Joint Probability");
+Console.WriteLine("6 | Kumulative Verteilungsfunktion");
+Console.WriteLine("7 | Unabhängige Wahrscheinlichkeit");
+Console.WriteLine("8 | Abbrechen");
 Console.WriteLine();
 Console.WriteLine();
 Console.WriteLine("Geben sie ihre Auswahl ein.");
@@ -59,111 +57,132 @@ if (zahl == 1)
         Console.WriteLine("Geben sie Ihre Auswahl ein:");
         int auswahl1 = Convert.ToInt32(Console.ReadLine());
         Console.Clear();
-        if (auswahl1 == 1)
+        while (true)
         {
-            Console.WriteLine("Bitte geben sie die Absolute Häufigkeit an:");
-            decimal GZ1 = Convert.ToDecimal(Console.ReadLine());
-            Console.WriteLine("Bitte geben sie die Anzahl der Versuche an:"); ;
-            decimal V1 = Convert.ToDecimal(Console.ReadLine());
+            if (auswahl1 == 1)
+            {
+                Console.WriteLine("Bitte geben sie die Absolute Häufigkeit an:");
+                decimal GZ1 = Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine("Bitte geben sie die Anzahl der Versuche an:"); ;
+                decimal V1 = Convert.ToDecimal(Console.ReadLine());
 
-            decimal Lösung1 = GZ1 / V1;
-            decimal Lösung2 = Lösung1 * 100;
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine($"Die Relative Häufigkeit:{Lösung2}");
-        }
-        else if (auswahl1 == 2)
-        {
-            Console.WriteLine("Bitte geben sie die Relative Häufigkeit an: ");
-            decimal RH1 = Convert.ToDecimal(Console.ReadLine());
-            Console.WriteLine("Bitte geben sie die Anzahl der Versuche an:");
-            decimal V2 = Convert.ToDecimal(Console.ReadLine());
+                decimal Lösung1 = GZ1 / V1;
+                decimal Lösung2 = Lösung1 * 100;
+                Console.WriteLine("");
+                Console.WriteLine("");
+                Console.WriteLine($"Die Relative Häufigkeit:{Lösung2}");
+                Console.WriteLine("");
+                Console.WriteLine("");
+            }
+            else if (auswahl1 == 2)
+            {
+                Console.WriteLine("Bitte geben sie die Relative Häufigkeit an: ");
+                decimal RH1 = Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine("Bitte geben sie die Anzahl der Versuche an:");
+                decimal V2 = Convert.ToDecimal(Console.ReadLine());
 
-            decimal lösung3 = RH1 * V2;
-            Console.WriteLine($"Die Absolute Häufigkeit: {lösung3}");
-        }
-        else if (auswahl1 == 3)
-        {
-            Console.WriteLine("Bitte geben sie die Relative Häufigkeit an: ");
-            decimal RH2 = Convert.ToDecimal(Console.ReadLine());
-            Console.WriteLine("Bitte geben sie die Absolute Häufigkeit an:");
-            decimal AH2 = Convert.ToDecimal(Console.ReadLine());
+                decimal lösung3 = RH1 * V2;
+                Console.WriteLine($"Die Absolute Häufigkeit: {lösung3}");
+                Console.WriteLine("");
+                Console.WriteLine("");
+            }
+            else if (auswahl1 == 3)
+            {
+                Console.WriteLine("Bitte geben sie die Relative Häufigkeit an: ");
+                decimal RH2 = Convert.ToDecimal(Console.ReadLine());
+                Console.WriteLine("Bitte geben sie die Absolute Häufigkeit an:");
+                decimal AH2 = Convert.ToDecimal(Console.ReadLine());
 
-            decimal lösung4 = RH2 / AH2;
-            Console.WriteLine($"Die Anzahl der Versuche: {lösung4}");
+                decimal lösung4 = RH2 / AH2;
+                Console.WriteLine($"Die Anzahl der Versuche: {lösung4}");
+                Console.WriteLine("");
+                Console.WriteLine("");
+            }
+
+
+
+
         }
+
 
 
     }
     else if (zahl2 == 2)
     {
-        Console.WriteLine("Bitte geben Sie eine Liste von Zahlen ein (durch Kommas getrennt):");
-        List<int> zahlen = Console.ReadLine().Split(',').Select(int.Parse).ToList();
-        Dictionary<int, int> absolut = zahlen.GroupBy(zahl => zahl).ToDictionary(grp => grp.Key, grp => grp.Count());
-        Dictionary<int, double> relativ = absolut.ToDictionary(pair => pair.Key, pair => (double)pair.Value / zahlen.Count);
-
-        Console.WriteLine("Zahl\tAbsolut\tRelativ");
-        foreach (KeyValuePair<int, int> pair in absolut)
+        while (true)
         {
-            int zahl90 = pair.Key;
-            int absolutHaeufigkeit = pair.Value;
-            double relativHaeufigkeit = relativ[zahl90];
-            Console.WriteLine("{0}\t{1}\t{2:F2}", zahl90, absolutHaeufigkeit, relativHaeufigkeit);
-        }
+            Console.WriteLine("Bitte geben Sie eine Liste von Zahlen ein (durch Kommas getrennt):");
+            List<int> zahlen = Console.ReadLine().Split(',').Select(int.Parse).ToList();
+            Dictionary<int, int> absolut = zahlen.GroupBy(zahl => zahl).ToDictionary(grp => grp.Key, grp => grp.Count());
+            Dictionary<int, double> relativ = absolut.ToDictionary(pair => pair.Key, pair => (double)pair.Value / zahlen.Count);
 
-        Console.ReadLine();
+            Console.WriteLine("Zahl\tAbsolut\tRelativ");
+            foreach (KeyValuePair<int, int> pair in absolut)
+            {
+                int zahl90 = pair.Key;
+                int absolutHaeufigkeit = pair.Value;
+                double relativHaeufigkeit = relativ[zahl90];
+                Console.WriteLine("{0}\t{1}\t{2:F2}", zahl90, absolutHaeufigkeit, relativHaeufigkeit);
+            }
+
+        }
     }
 
     else if (zahl2 == 3)
     {
-        Console.WriteLine("_________________________________________");
-        Console.WriteLine("Konditionale relative Häufigkeiten");
-        Console.WriteLine("_________________________________________");
-        Console.WriteLine("");
-        Console.WriteLine("");
-        Console.WriteLine("Geben Sie die Anzahl der Zustände ein:");
-        int anzahlZustaende = int.Parse(Console.ReadLine());
 
-
-        Dictionary<string, int> zustandHaeufigkeiten = new Dictionary<string, int>();
-        for (int i = 1; i <= anzahlZustaende; i++)
         {
-            Console.Write("Geben Sie die Häufigkeit für Zustand {0} ein: ", i);
-            int haeufigkeit = int.Parse(Console.ReadLine());
-            zustandHaeufigkeiten.Add($"Zustand{i}", haeufigkeit);
-        }
-
-
-        Dictionary<string, Dictionary<string, int>> zustandUebergangsHaeufigkeiten = new Dictionary<string, Dictionary<string, int>>();
-        for (int i = 1; i <= anzahlZustaende; i++)
-        {
-            string zustand1 = $"Zustand{i}";
-            Dictionary<string, int> uebergangsHaeufigkeiten = new Dictionary<string, int>();
-            for (int j = 1; j <= anzahlZustaende; j++)
+            Console.WriteLine("_________________________________________");
+            Console.WriteLine("Konditionale relative Häufigkeiten");
+            Console.WriteLine("_________________________________________");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            while (true)
             {
-                string zustand2 = $"Zustand{j}";
-                Console.Write("Geben Sie die Häufigkeit für Übergang {0} -> {1} ein: ", zustand1, zustand2);
-                int haeufigkeit = int.Parse(Console.ReadLine());
-                uebergangsHaeufigkeiten.Add(zustand2, haeufigkeit);
+                Console.WriteLine("Geben Sie die Anzahl der Zustände ein:");
+                int anzahlZustaende = int.Parse(Console.ReadLine());
+
+                Dictionary<string, int> zustandHaeufigkeiten = new Dictionary<string, int>();
+                for (int i = 1; i <= anzahlZustaende; i++)
+                {
+                    Console.Write("Geben Sie die Häufigkeit für Zustand {0} ein: ", i);
+                    int haeufigkeit = int.Parse(Console.ReadLine());
+                    zustandHaeufigkeiten.Add($"Zustand{i}", haeufigkeit);
+                }
+
+                Dictionary<string, Dictionary<string, int>> zustandUebergangsHaeufigkeiten = new Dictionary<string, Dictionary<string, int>>();
+                for (int i = 1; i <= anzahlZustaende; i++)
+                {
+                    string zustand1 = $"Zustand{i}";
+                    Dictionary<string, int> uebergangsHaeufigkeiten = new Dictionary<string, int>();
+                    for (int j = 1; j <= anzahlZustaende; j++)
+                    {
+                        string zustand2 = $"Zustand{j}";
+                        Console.Write("Geben Sie die Häufigkeit für Übergang {0} -> {1} ein: ", zustand1, zustand2);
+                        int haeufigkeit = int.Parse(Console.ReadLine());
+                        uebergangsHaeufigkeiten.Add(zustand2, haeufigkeit);
+                    }
+                    zustandUebergangsHaeufigkeiten.Add(zustand1, uebergangsHaeufigkeiten);
+
+                }
+
+
+                Console.WriteLine("Zustand\tZustand 2\tKond. Rel. Haeufigkeit");
+                foreach (KeyValuePair<string, Dictionary<string, int>> uebergang in zustandUebergangsHaeufigkeiten)
+                {
+                    string zustand1 = uebergang.Key;
+                    foreach (KeyValuePair<string, int> uebergangHaeufigkeit in uebergang.Value)
+                    {
+                        string zustand2 = uebergangHaeufigkeit.Key;
+                        int uebergangHaeufigkeitWert = uebergangHaeufigkeit.Value;
+                        double konditionaleRelHaeufigkeit = (double)uebergangHaeufigkeitWert / zustandHaeufigkeiten[zustand1];
+                        Console.WriteLine("{0}\t{1}\t{2:F3}", zustand1, zustand2, konditionaleRelHaeufigkeit);
+                    }
+                }
             }
-            zustandUebergangsHaeufigkeiten.Add(zustand1, uebergangsHaeufigkeiten);
+
+
         }
-
-
-        Console.WriteLine("Zustand\tZustand 2\tKond. Rel. Haeufigkeit");
-        foreach (KeyValuePair<string, Dictionary<string, int>> uebergang in zustandUebergangsHaeufigkeiten)
-        {
-            string zustand1 = uebergang.Key;
-            foreach (KeyValuePair<string, int> uebergangHaeufigkeit in uebergang.Value)
-            {
-                string zustand2 = uebergangHaeufigkeit.Key;
-                int uebergangHaeufigkeitWert = uebergangHaeufigkeit.Value;
-                double konditionaleRelHaeufigkeit = (double)uebergangHaeufigkeitWert / zustandHaeufigkeiten[zustand1];
-                Console.WriteLine("{0}\t{1}\t{2:F3}", zustand1, zustand2, konditionaleRelHaeufigkeit);
-            }
-        }
-
-        Console.ReadLine();
     }
     else if (zahl2 == 4)
     {
@@ -182,6 +201,7 @@ if (zahl == 1)
             daten[i] = double.Parse(Console.ReadLine());
         }
 
+        // Sortieren der Daten
         Array.Sort(daten);
 
         Console.WriteLine("Zahl\tAbsolut\tRelativ\tKumulativ");
@@ -239,43 +259,9 @@ else if (zahl == 2)
 
     Console.ReadKey();
 }
+
+
 else if (zahl == 3)
-{
-    Console.WriteLine("________________________________________________");
-    Console.WriteLine("        A-priori-Wahrscheinlichkeit");
-    Console.WriteLine("________________________________________________");
-    Console.WriteLine("");
-    Console.WriteLine("");
-    Console.WriteLine("");
-    Console.Write("Gib die A-priori-Wahrscheinlichkeit ein: ");
-    double prior = double.Parse(Console.ReadLine());
-
-    Console.Write("Gib die Likelihood ein: ");
-    double likelihood = double.Parse(Console.ReadLine());
-
-    double evidence = 0;
-    while (true)
-    {
-        Console.Write("Gib die Anzahl der möglichen Ergebnisse ein: ");
-        int possibleOutcomes = int.Parse(Console.ReadLine());
-
-        Console.Write("Gib die Anzahl der beobachteten Ergebnisse ein: ");
-        int observedOutcomes = int.Parse(Console.ReadLine());
-
-        if (observedOutcomes <= possibleOutcomes)
-        {
-            evidence = (double)observedOutcomes / possibleOutcomes;
-            break;
-        }
-
-        Console.WriteLine("Fehler: Die Anzahl der beobachteten Ergebnisse kann nicht größer sein als die Anzahl der möglichen Ergebnisse.");
-    }
-
-    double posterior = (likelihood * prior) / evidence;
-    Console.WriteLine("Die A-posteriori-Wahrscheinlichkeit beträgt: " + posterior);
-    Console.ReadKey();
-}
-else if (zahl == 4)
 {
     Console.WriteLine("________________________________________");
     Console.WriteLine("     Bedingte Wahrscheinlichkeit");
@@ -305,8 +291,11 @@ else if (zahl == 4)
     Console.WriteLine("Die bedingte Wahrscheinlichkeit mit der gegebenen Bedingung beträgt: " + conditionalProbability);
     Console.ReadKey();
 }
-else if (zahl == 5)
+else if (zahl == 4)
 {
+    Console.WriteLine("________________________________________");
+    Console.WriteLine("     Marginale Wahrscheinlichkeit");
+    Console.WriteLine("________________________________________");
     Console.Write("Gib die Anzahl der günstigen Ereignisse ein: ");
     double a = double.Parse(Console.ReadLine());
 
@@ -326,7 +315,7 @@ else if (zahl == 5)
     Console.WriteLine("Die marginale Wahrscheinlichkeit von B ist: " + pB);
     Console.ReadKey();
 }
-else if (zahl == 6)
+else if (zahl == 5)
 {
     Console.WriteLine("_______________________________________________________________");
     Console.WriteLine("                      Joint Probability");
@@ -350,7 +339,7 @@ else if (zahl == 6)
     Console.WriteLine("Die Joint Probability von A und B ist: " + pAB);
     Console.ReadKey();
 }
-else if (zahl == 7)
+else if (zahl == 6)
     {
     Console.Write("Gib die Anzahl der möglichen Ereignisse ein: ");
     int n = int.Parse(Console.ReadLine());
@@ -382,7 +371,7 @@ else if (zahl == 7)
         return result;
     }
     }
-else if (zahl == 8)
+else if (zahl == 7)
     {
     Console.WriteLine("____________________________________________");
     Console.WriteLine("      Unabhängige Wahrscheinlichkeit");
@@ -400,35 +389,10 @@ else if (zahl == 8)
     Console.WriteLine($"Die Wahrscheinlichkeit beider Ereignisse ist: {p}");
     Console.ReadKey();
     }
-else if (zahl == 9)
+else if (zahl == 8)
 {
-    Console.WriteLine("________________________________________________________");
-    Console.WriteLine("                Bedingte Unabhängigkeit");
-    Console.WriteLine("________________________________________________________");
-    double pA = 0, pB = 0, pC = 0, pB_given_c = 0, pA_and_B_given_c = 0;
-    Console.WriteLine("Bitte geben Sie die Werte für p(A), p(B), p(C) und p(B|C) ein:");
-    Console.Write("p(A): ");
-    pA = Convert.ToDouble(Console.ReadLine());
-    Console.Write("p(B): ");
-    pB = Convert.ToDouble(Console.ReadLine());
-    Console.Write("p(C): ");
-    pC = Convert.ToDouble(Console.ReadLine());
-    Console.Write("p(B|C): ");
-    pB_given_c = Convert.ToDouble(Console.ReadLine());
-
-    // Berechnung der bedingten Wahrscheinlichkeit p(A und B | C)
-    pA_and_B_given_c = pB_given_c * pA;
-
-    // Überprüfung der bedingten Unabhängigkeit
-    if (pA_and_B_given_c == pA * pB)
-    {
-        Console.WriteLine("Die Ereignisse A und B sind bedingt unabhängig gegeben C.");
-    }
-    else
-    {
-        Console.WriteLine("Die Ereignisse A und B sind nicht bedingt unabhängig gegeben C.");
-    }
+    Environment.Exit(1);
+    Console.ReadKey();
+}
 
     Console.ReadKey();
-    Console.ReadKey();
-    }
