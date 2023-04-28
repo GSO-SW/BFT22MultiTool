@@ -15,8 +15,8 @@ namespace PHFragBFTKlassenBibliothek
                 (int, int) cPosBM = Console.GetCursorPosition();
                 
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
-                                      "|                          >>> Berechnung von Volumen <<<                           |\n" +
-                                      "------------------------------------------------------------------------------------\n");
+                                  "|                          >>> Berechnung von Volumen <<<                           |\n" +
+                                  "------------------------------------------------------------------------------------\n");
                 Console.WriteLine("Optionen für die Volumen Berechnung");
                 Console.WriteLine("1. Würfel");
                 Console.WriteLine("2. Kugel");
@@ -29,7 +29,6 @@ namespace PHFragBFTKlassenBibliothek
                 {
                     case "1":
                         Console.Write("\nBitte geben sie die Kantenlänge des Würfels ein: ");
-                        Exit= true;
                         double length = double.Parse(Console.ReadLine());
                         double volume = Math.Pow(length, 3);
                         Console.WriteLine($"\nDas Volumen des Würfels beträgt: {volume}qm");
