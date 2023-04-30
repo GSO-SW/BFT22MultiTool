@@ -40,35 +40,35 @@ Alle Teilnehmer die noch kein Feature eingereicht haben, sind dazu angehalten, z
 | --------------- 	| -------- 	|------		        |--------	|-----------	         |
 |**Administration**	|Release    |Administrator		|     	  |Release, main         |
 |		                |	          |		              |      		|		                   |		
-|**Elektrotechnik**	|Menü ET    |Teamkoordinator  |         |ETEntwicklung,Feature1|
-|                   |           |Entwickler       |         |Feature2              |
-|                   |           |Entwickler       |         |Feature3              |
-|                   |           |Entwickler       |         |Feature4              |
+|**Elektrotechnik**	|Menü ET , Solardach Rechner    |Teamkoordinator  |   can827      |ETEntwicklung,Feature1|
+|                   | Bauteil Rechner          |Entwickler       |   getoarkastrati      |Feature2              |
+|                   | Elektro Sicherheit App          |Entwickler       |   Ilkan827      |Feature3              |
+|                   | Rechner für Elektrische Werte          |Entwickler       |   DominicBraun      |Feature4              |
 |                   |           |Entwickler       |         |Feature5              |
 |		                |	          |              		|		      |		                   |		
-|**Physik**	        |Menü PY 	  |Teamkoordinator  |         |PHEntwicklung	,Feature6|
-|		                |           |Entwickler	      |         |Feature7              |		
-|		                |	          |Entwickler	      |         |Feature8              |
-|		                |           |Entwickler	      |         |Feature9              |
-|		                |           |Entwickler       |         |Feature10             |		
+|**Physik**	        |Menü PY / Vorsätze für Maßeinheiten umwandeln SI-Einheiten umrechen	  |Teamkoordinator  |x10Lukas         |PHEntwicklung	,Feature6|
+|		                |Schwerkraft - Vergleich zu anderen Planeten, Allg. Schwerkraftberechnen           |Entwickler	      |LeutnantRabe         |Feature7              |		
+|		                |Infos zur Aufbau und Struktur der Materie        |Entwickler	      |KhalidSmoqy         |Feature8              |
+|		                |Volumen von Würfeln, Kugel, Pyramide und Prisma          |Entwickler	      |lorenormert4242         |Feature9              |
+|		                |           |Entwickler       |LeonDE         |Feature10             |		
 |		                |	          |                 |         |                      |				
-|**Informatik**	    |Menü IT    |Teamkoordinator  |         |ITEntwicklung,Feature11|				
-|		                |	          |Entwickler       |		      |Feature12             |		
-|		                |	          |Entwickler       |         |Feature13             |	
-|		                |	          |Entwickler       |  	      |Feature14             |			
-|		                |	          |Entwickler       |         |Feature15             |			
+|**Informatik**	    |Menü IT , Fake Taskmanager   |Teamkoordinator  |     ArthurDyga    |ITEntwicklung,Feature11|				
+|		                |	 video/foto/ und audio rechner         |Entwickler       |		 ayoubcgn     |Feature12             |		
+|		                |	 datai pfad ausgabe         |Entwickler       |      milchschnittyy   |Feature13             |	
+|		                |	 passender ram/ bandbreite ausrechnen         |Entwickler       |  	   st3ch3rcl4n   |Feature14             |			
+|		                |	 bits und byte umrechner         |Entwickler       |      Pablo202212   |Feature15             |			
 |		                |	          |	                |		      |		                   |				
-|**Wirtschaft**	    |Menü WI    |Teamkoordinator  |	        |WIEntwicklung,Feature16|				
-|		                |           |Entwickler       |         |Feature17             |		
-|		                |	          |Entwickler       |		      |Feature18             |		
-|		                |	          |Entwickler       |         |Feature19             |	
+|**Wirtschaft**	    |Menü WI    |Teamkoordinator  |	HasanYavuz03        |WIEntwicklung,Feature16|				
+|		                |Auto-Versicherungs Rechner           |Entwickler       |BaranAlg         |Feature17             |		
+|		                |Immobilien Rechner	          |Entwickler       |ismocgn7		      |Feature18             |		
+|		                |Gehalts Rechner	          |Entwickler       |Key20030        |Feature19             |	
 |		                |	          |Entwickler       |	        |Feature20             |	
 |		                |	          |	              	|		      |                   	 |					
-|**Mathematik**	    |Menü MT    |Teamkoordinator  |         |MAEntwicklung,Feature21|				
-|		                |           |Entwickler       |         |Feature22             |		
-|		                |           |Entwickler       |         |Feature23             |		
-|		                |           |Entwickler       |  	      |Feature24             |
-|		                |           |Entwickler	      |       	|Feature25             |
+|**Mathematik**	    |Menü MT, Wahrscheinlichkeitsrechnung    |Teamkoordinator  |NihatArtan |MAEntwicklung,Feature21|				
+|		                |Flächenberechnung           |Entwickler       |NicoGeno   |Feature22             |		
+|		                |Quadratische Funktion           |Entwickler       |Timsolo0408|Feature23             |		
+|		                |Lineare Funktion           |Entwickler       |Okan       |Feature24             |
+|		                |           |Entwickler	      |          	|Feature25             |
 
 
 ---
@@ -101,11 +101,11 @@ Alle Teamkoordinatoren müssen eine neue Klassenbibliothek für ihren Bereich er
 
 |Bereich|Name der Klassenbibliothek|Untermenü Klassenname/Dateiname|Methodenbezeichnung|
 | ----------- 	| ----------- 	| ----------- 	| ----------- 	|
-| Elektrotechnik | ETFragBFTKlassenBibliothek|ETMenue/ETMenue.cs|ETSubMenue|
-| Informatik|ITFragBFTKlassenBibliothek |ITMenue/ITMenue.cs|ITSubMenue|
-| Mathematik  |MAFragBFTKlassenBibliothek |MAMenue.cs/MAMenue|MASubMenue|
-|Physik|PHFragBFTKlassenBibliothek|PHMenue/PHMenue.cs|PHSubMenue|
-|Wirtschaft|WIFragBFTKlassenBibliothek|WIMenue/WIMenue.cs|WISubMenue|
+| Elektrotechnik | ETBFTKlassenBibliothek|ETMenue/ETMenue.cs|ETSubMenue|
+| Informatik|ITBFTKlassenBibliothek |ITMenue/ITMenue.cs|ITSubMenue|
+| Mathematik  |MABFTKlassenBibliothek |MAMenue.cs/MAMenue|MASubMenue|
+|Physik|PHBFTKlassenBibliothek|PHMenue/PHMenue.cs|PHSubMenue|
+|Wirtschaft|WIBFTKlassenBibliothek|WIMenue/WIMenue.cs|WISubMenue|
 
 Die jeweiligen Bereiche und Ihre Mitglieder erstellen und verändern nur Dateien in ihren **eigenen** Klassenbibliotheken. ⚠️ 
 
