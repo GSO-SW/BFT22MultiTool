@@ -50,17 +50,18 @@ namespace WIBFTKlassenBibliothek
                 {
                     case "e":
                         Console.Clear();
-                        Feature19.Feature_19();
+                        Feature16.Feature_16();
                         break;
 
                     case "i":
                         Console.Clear();
+                        Feature17.Feature_17();
                         //Hier das Informationstechnikmenü aufrufen
                         break;
 
                     case "m":
                         Console.Clear();
-                        //Hier das Mathematikmenü aufrufen
+
                         break;
 
                     case "p":
