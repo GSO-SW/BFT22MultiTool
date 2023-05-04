@@ -30,26 +30,35 @@ namespace PHFragBFTKlassenBibliothek
 
                 string choice = Console.ReadLine();
                 switch (choice)
+
                 {
                     case "1":
                         Console.Write("\nGeben Sie den Namen des Planeten ein: ");
                         planetName = Console.ReadLine();
                         Console.Write("\nGeben Sie die Masse des Planeten in kg ein: ");
-                        m = double.Parse(Console.ReadLine());
+                        if (!double.TryParse(Console.ReadLine(), out m))
+                        {
+                            Console.WriteLine("Ungültige Eingabe für die Masse.");
+                            Console.ReadKey();
+                            break;
+                        }
                         Console.Write("\nGeben Sie den Radius des Planeten in Metern ein: ");
-                        r = double.Parse(Console.ReadLine());
+                        if (!double.TryParse(Console.ReadLine(), out r))
+                        {
+                            Console.WriteLine("Ungültige Eingabe für den Radius.");
+                            Console.ReadKey();
+                            break;
+                        }
 
                         double F = G * m / (r * r);
+                        Console.WriteLine("Die Schwerkraft auf dem Planeten " + planetName + " beträgt " + F + " N.");
                         break;
 
                     case "exit":
                         Exit = true;
                         break;
 
-                        break;
-
                     default:
-
                         Console.WriteLine("Ungültige Eingabe");
                         Console.ReadKey();
 
