@@ -15,10 +15,6 @@ namespace PHFragBFTKlassenBibliothek
             do
             {
                 (int, int) cPosBM = Console.GetCursorPosition();
-
-                double G = 6.67430e-11; // Gravitationskonstante
-                double m, r;
-                string planetName;
                 Console.WriteLine("------------------------------------------------------------------------------------\n" +
                                   "|                     >>> Willkommen zum Schwerkraft-Rechner! <<<                  |\n" +
                                   "------------------------------------------------------------------------------------\n\n");
@@ -34,24 +30,58 @@ namespace PHFragBFTKlassenBibliothek
                 {
                     case "1":
                         Console.Write("\nGeben Sie den Namen des Planeten ein: ");
-                        planetName = Console.ReadLine();
-                        Console.Write("\nGeben Sie die Masse des Planeten in kg ein: ");
-                        if (!double.TryParse(Console.ReadLine(), out m))
+                        string planetName = Console.ReadLine();
+                        if (planetName.ToLower() == "exit")
                         {
-                            Console.WriteLine("Ungültige Eingabe für die Masse.");
-                            Console.ReadKey();
-                            break;
+                            Environment.Exit(0);
                         }
-                        Console.Write("\nGeben Sie den Radius des Planeten in Metern ein: ");
-                        if (!double.TryParse(Console.ReadLine(), out r))
+                        else if (planetName.ToLower() == "submenu")
                         {
-                            Console.WriteLine("Ungültige Eingabe für den Radius.");
-                            Console.ReadKey();
-                            break;
+                            return;
                         }
-
-                        double F = G * m / (r * r);
-                        Console.WriteLine("Die Schwerkraft auf dem Planeten " + planetName + " beträgt " + F + " N.");
+                        else if (planetName == planetName)
+                        {
+                            Console.Write("\nGeben Sie die Masse des Planeten in kg ein: ");
+                            string masse = Console.ReadLine();
+                            if (masse.ToLower() == "exit")
+                            {
+                                Environment.Exit(0);
+                            }
+                            else if (masse.ToLower() == "subexit")
+                            {
+                                return;
+                            }
+                            else if (double.TryParse(masse, out double masse1))
+                            {
+                                Console.Write("\nGeben Sie den Radius des Planeten in Metern ein: ");
+                                string radiusPlanet = Console.ReadLine();
+                                if (radiusPlanet.ToLower() == "exit")
+                                {
+                                    Environment.Exit(0);
+                                }
+                                else if (radiusPlanet.ToLower() == "subexit")
+                                {
+                                    return;
+                                }
+                                else if (double.TryParse(radiusPlanet, out double radius1))
+                                {
+                                    double F = 6.67430e-11 * masse1 / (radius1 * radius1);
+                                    Console.WriteLine($"Die Schwerkraft auf dem Planeten {planetName} beträgt {F}N.");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine Zahl ein!");
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine Zahl ein!");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine Zahl ein!");
+                        }
                         break;
 
                     case "exit":
