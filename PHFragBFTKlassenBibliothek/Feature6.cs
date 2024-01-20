@@ -228,7 +228,6 @@ namespace PHFragBFTKlassenBibliothek
                         Exit = true;
                         break;
                     default:
-
                         Console.WriteLine("Ungültige Eingabe");
                         Console.ReadKey();
 
