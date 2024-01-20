@@ -15,7 +15,6 @@ namespace PHFragBFTKlassenBibliothek
 
             do
             {
-
                 (int, int) cPosBM = Console.GetCursorPosition();
                 Console.ForegroundColor = ConsoleColor.DarkMagenta;
                 Console.WriteLine("+------------------------------------------------+\n" +
@@ -73,6 +72,8 @@ namespace PHFragBFTKlassenBibliothek
                         {
                             double kilometers = meters / 1000;
                             Console.WriteLine($"{meters} Meter entsprechen {kilometers} Kilometer.");
+                            Console.ReadKey();
+                            Console.Clear();
                         }
                         else
                         {
@@ -117,6 +118,8 @@ namespace PHFragBFTKlassenBibliothek
                         {
                             double meters2 = centimeters / 100;
                             Console.WriteLine($"{centimeters} Zentimeter entsprechen {meters2} Metern.");
+                            Console.ReadKey();
+                            Console.Clear();
                         }
                         else
                         {
@@ -161,6 +164,8 @@ namespace PHFragBFTKlassenBibliothek
                         {
                             double kilograms = grams / 1000;
                             Console.WriteLine($"{grams} Gramm entsprechen {kilograms} Kilogramm.", grams, kilograms);
+                            Console.ReadKey();
+                            Console.Clear();
                         }
                         else
                         {
@@ -205,6 +210,8 @@ namespace PHFragBFTKlassenBibliothek
                         {
                             double seconds = milliseconds / 1000;
                             Console.WriteLine($"{milliseconds} Millisekunden entsprechen {seconds} Sekunden.");
+                            Console.ReadKey();
+                            Console.Clear();
                         }
                         else
                         {
@@ -226,7 +233,6 @@ namespace PHFragBFTKlassenBibliothek
                         break;
                         Console.ReadKey();
                 }
-
             } while (!Exit);
         }
     }
