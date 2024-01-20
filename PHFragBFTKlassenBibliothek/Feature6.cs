@@ -80,6 +80,7 @@ namespace PHFragBFTKlassenBibliothek
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine Zahl ein");
                             Console.ResetColor();
+                            Console.ReadKey();
                         }
                         break;
                     case "2":
@@ -126,6 +127,7 @@ namespace PHFragBFTKlassenBibliothek
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine Zahl ein");
                             Console.ResetColor();
+                            Console.ReadKey();
                         }
                         break;
                     case "3":
@@ -172,6 +174,7 @@ namespace PHFragBFTKlassenBibliothek
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine Zahl ein");
                             Console.ResetColor();
+                            Console.ReadKey();
                         }
                         break;
                     case "4":
@@ -218,6 +221,7 @@ namespace PHFragBFTKlassenBibliothek
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine("Ungültige Eingabe. Bitte geben Sie eine Zahl ein");
                             Console.ResetColor();
+                            Console.ReadKey();
                         }
                         break;
                     case "exit":
@@ -226,12 +230,12 @@ namespace PHFragBFTKlassenBibliothek
                     default:
 
                         Console.WriteLine("Ungültige Eingabe");
+                        Console.ReadKey();
 
                         (int, int) cPosAM = Console.GetCursorPosition();
 
                         KonsolenExtrasBibliothek.ConsoleExtras.ClearCurrentConsoleLine(cPosBM.Item2, cPosAM.Item2);
                         break;
-                        Console.ReadKey();
                 }
             } while (!Exit);
         }
